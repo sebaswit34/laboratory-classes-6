@@ -1,9 +1,9 @@
 {
   "name": "laboratory-classes-6",
   "version": "1.0.0",
-  "description": "",
-  "main": "server.js",
+  "main": "main.js",
   "scripts": {
+    "electron": "electron .",
     "start": "nodemon server.js"
   },
   "author": "",
@@ -12,10 +12,21 @@
     "body-parser": "^2.2.0",
     "ejs": "^3.1.10",
     "express": "^5.1.0",
-    "laboratory-classes-6": "file:"
+    "laboratory-classes-6": "file:",
+    "node": "^22.15.0"
   },
   "devDependencies": {
+    "electron": "^36.2.0",
     "nodemon": "^3.1.9"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sebaswit34/laboratory-classes-6.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/sebaswit34/laboratory-classes-6/issues"
+  },
+  "homepage": "https://github.com/sebaswit34/laboratory-classes-6#readme",
+  "description": ""
 }
-

@@ -1,6 +1,6 @@
 const express = require("express");
 const bodyParser = require("body-parser");
-
+const path = require("path");
 const { PORT } = require("./config");
 const logger = require("./utils/logger");
 const productsRoutes = require("./routing/products");
@@ -9,7 +9,6 @@ const killRoutes = require("./routing/kill");
 const homeRoutes = require("./routing/home");
 const { STATUS_CODE } = require("./constants/statusCode");
 const { MENU_LINKS } = require("./constants/navigation");
-const getFileFromAbsolutePath = require("./utils/getFileFromAbsolutePath");
 const cartController = require("./controllers/cartController");
 
 const app = express();
@@ -17,7 +16,7 @@ const app = express();
 app.set("view engine", "ejs");
 app.set("views", "views");
 
-app.use(express.static(getFileFromAbsolutePath("public")));
+app.use(express.static(path.join(__dirname, "public")));
 app.use(bodyParser.urlencoded({ extended: false }));
 
 app.use((request, _response, next) => {
